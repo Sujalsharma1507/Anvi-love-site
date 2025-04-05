@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart Animation</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #ffe8f0; text-align: center; font-family: 'Poppins', sans-serif; padding: 2rem; }
+    .heart-animation { font-size: 2rem; color: #ff5e78; margin-top: 2rem; }
+    .timer { margin-top: 1rem; font-size: 1.2rem; }
+    .enter-btn { margin-top: 2rem; padding: 1rem 2rem; background: #ff69b4; border: none; color: white; border-radius: 30px; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <audio autoplay loop style="display:none;"><source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg"></audio>
+  <h1 class="heart-animation">💓 Our love is growing stronger every second 💓</h1>
+  <div class="timer" id="timer">Time since July 15, 2024: <span id="time"></span></div>
+  <button class="enter-btn" onclick="location.href='page3.html'">Enter</button>
+  <script>
+    const startDate = new Date('2024-07-15T00:00:00');
+    setInterval(() => {
+      const now = new Date();
+      const diff = now - startDate;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById('time').innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+  </script>
+  <script src="heart-cursor.js"></script>
+</body>
+</html>

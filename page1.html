@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will you be mine?</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #ffe4ec;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      height: 100vh; text-align: center; font-family: Arial;
+    }
+    h1 { font-size: 2.5rem; color: #d63384; }
+    .btn { padding: 1rem 2rem; font-size: 1.2rem; margin: 10px; border-radius: 30px; border: none; cursor: pointer; }
+    .yes { background-color: #ff69b4; color: white; }
+    .no { background-color: #eee; color: #333; animation: shake 1s infinite; }
+    @keyframes shake { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
+  </style>
+</head>
+<body>
+  <audio autoplay loop style="display:none;"><source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg"></audio>
+  <h1>Will you be mine forever, meri jaan? 💖</h1>
+  <div>
+    <button class="btn yes" onclick="location.href='page2.html'">Yes</button>
+    <button class="btn no">No</button>
+  </div>
+  <script src="heart-cursor.js"></script>
+</body>
+</html>

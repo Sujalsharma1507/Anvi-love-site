@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From My Heart</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: linear-gradient(to right, #fbc2eb, #a6c1ee); text-align: center; padding: 2rem; color: white; font-family: 'Poppins', sans-serif; }
+    .container { max-width: 800px; margin: auto; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 25px; backdrop-filter: blur(10px); }
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; font-family: 'Great Vibes', cursive; }
+    .message { font-size: 1rem; line-height: 1.6; margin-bottom: 2rem; }
+    button { padding: 1rem 2rem; border: none; background: #ff69b4; border-radius: 30px; color: white; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <audio autoplay loop style="display:none;"><source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg"></audio>
+  <div class="container">
+    <h1>From My Heart to Yours 💖</h1>
+    <div class="message" id="typedText"></div>
+    <button onclick="location.href='page4.html'">Next Chapter 📸</button>
+  </div>
+  <script>
+    const text = `Anvi, meri pyaari bachi...\n\nI know life right now is all about dreams, goals, and struggles. But in the midst of it all — you, my jaan, are the most beautiful part of my journey.\n\nEvery second I spend without you, I remind myself that one day we’ll look back at these days and smile — because we made it through.\n\nYou are my forever.`;
+    let i = 0;
+    function typeText() {
+      if (i < text.length) {
+        document.getElementById('typedText').innerText += text.charAt(i);
+        i++;
+        setTimeout(typeText, 40);
+      }
+    }
+    typeText();
+  </script>
+  <script src="heart-cursor.js"></script>
+</body>
+</html>
